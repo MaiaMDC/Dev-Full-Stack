@@ -1,9 +1,7 @@
 package com.marcio.helpdesk.controller;
 
 import com.marcio.helpdesk.domain.Chamado;
-import com.marcio.helpdesk.domain.Tecnico;
 import com.marcio.helpdesk.domain.dtos.ChamadoDTO;
-import com.marcio.helpdesk.domain.dtos.TecnicoDTO;
 import com.marcio.helpdesk.services.ChamadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -40,6 +38,12 @@ public class ChamadoController {
         Chamado obj = service.create(objDTO);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
         return ResponseEntity.created(uri).build();
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<ChamadoDTO> update(@PathVariable Integer id,@Valid @RequestBody ChamadoDTO objDTO){
+        Chamado newObj =  service.update(id, objDTO);
+        return ResponseEntity.ok().body(new ChamadoDTO(newObj));
     }
 
 }
