@@ -36,11 +36,11 @@ public class DBService {
         Tecnico tec5 = new Tecnico(null, "Edcarlos Silva", "751.079.310-65", "edcarlos@mail.com", encoder.encode("123"));
 
 
-        Cliente cli1 = new Cliente(null, "Vanessa Prieto", "457.042.280-20", "Vanessa@mail.com", encoder.encode("123"));
-        Cliente cli2 = new Cliente(null, "Rodrigo Leite", "311.003.230-90", "Rodrigo@mail.com", encoder.encode("123"));
-        Cliente cli3 = new Cliente(null, "Emerson Oliveira", "814.870.790-10", "Emerson@mail.com", encoder.encode("123"));
-        Cliente cli4 = new Cliente(null, "Thiago Silva", "941.385.450-50", "Thiago@mail.com", encoder.encode("123"));
-        Cliente cli5 = new Cliente(null, "Jessica Pavan", "760.501.490-20", "Jessica@mail.com", encoder.encode("123"));
+        Cliente cli1 = new Cliente(null, "Vanessa Prieto", "457.042.280-20", "vanessa@mail.com", encoder.encode("123"));
+        Cliente cli2 = new Cliente(null, "Rodrigo Leite", "311.003.230-90", "rodrigo@mail.com", encoder.encode("123"));
+        Cliente cli3 = new Cliente(null, "Emerson Oliveira", "814.870.790-10", "emerson@mail.com", encoder.encode("123"));
+        Cliente cli4 = new Cliente(null, "Thiago Silva", "941.385.450-50", "thiago@mail.com", encoder.encode("123"));
+        Cliente cli5 = new Cliente(null, "Jessica Pavan", "760.501.490-20", "jessica@mail.com", encoder.encode("123"));
 
         Chamado c1 = new Chamado(null, Prioridade.MEDIA, Status.ANDAMENTO, "Chamado 01", "Primeiro chamado", tec1, cli1);
         Chamado c2 = new Chamado(null, Prioridade.ALTA, Status.ABERTO, "Chamado 02", "Segundo chamado", tec2, cli2);
